@@ -1,0 +1,19 @@
+version: '3'
+
+# it is always server in service
+services:
+# web is service name
+  web:
+    #  where we need to run docker build command
+    #  we need to run in current directory so we are using .
+    build: .
+    ports:
+    # docker port and system port
+    # <system port>:<docker port>
+      - 5000:5000
+
+# to start container and build image:
+# docker-compose up -d 
+
+# to stop container and build image:
+# docker-compose down
